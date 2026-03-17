@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>SmartRent AI</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+color:white;
+background:linear-gradient(-45deg,#1e3c72,#2a5298,#0f2027,#203a43);
+background-size:400% 400%;
+animation:bgmove 12s ease infinite;
+}
+
+@keyframes bgmove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+nav{
+background:rgba(0,0,0,0.8);
+padding:15px;
+text-align:center;
+backdrop-filter:blur(10px);
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00ffcc;
+}
+
+section{
+padding:80px;
+text-align:center;
+}
+
+.container{
+background:rgba(0,0,0,0.5);
+padding:40px;
+border-radius:15px;
+width:70%;
+margin:auto;
+backdrop-filter:blur(10px);
+box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+.hero{
+background:url("https://images.unsplash.com/photo-1560448204-e02f11c3d0e2") center/cover;
+padding:120px 20px;
+}
+
+.hero-overlay{
+background:rgba(0,0,0,0.6);
+padding:60px;
+border-radius:15px;
+}
+
+input,select,textarea{
+width:90%;
+padding:12px;
+margin:10px;
+border-radius:8px;
+border:none;
+font-size:15px;
+}
+
+button{
+background:linear-gradient(45deg,#27ae60,#2ecc71);
+color:white;
+padding:12px 25px;
+border:none;
+font-size:16px;
+cursor:pointer;
+border-radius:8px;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:linear-gradient(45deg,#2ecc71,#27ae60);
+}
+
+footer{
+background:#000;
+padding:20px;
+text-align:center;
+}
+
+.card{
+background:white;
+color:black;
+padding:20px;
+margin:20px;
+border-radius:12px;
+display:inline-block;
+width:220px;
+transition:0.3s;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 30px rgba(0,0,0,0.6);
+}
+
+.rotatingText{
+font-size:45px;
+font-weight:bold;
+color:#00ffcc;
+animation:rotateText 8s linear infinite;
+display:inline-block;
+margin-top:20px;
+}
+
+@keyframes rotateText{
+0%{transform:rotateY(0deg);}
+100%{transform:rotateY(360deg);}
+}
+
+.floating{
+position:fixed;
+top:20px;
+left:50%;
+transform:translateX(-50%);
+font-size:28px;
+font-weight:bold;
+color:#00ffcc;
+animation:float 3s ease-in-out infinite;
+}
+
+@keyframes float{
+0%{transform:translate(-50%,0);}
+50%{transform:translate(-50%,10px);}
+100%{transform:translate(-50%,0);}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="floating">🏠 SmartRent AI</div>
+
+<nav>
+
+<a href="#home">Home</a>
+<a href="#predict">Prediction</a>
+<a href="#analytics">Analytics</a>
+<a href="#theory">Theory</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<section id="home" class="hero">
+
+<div class="hero-overlay">
+
+<h1>SmartRent AI</h1>
+
+<div class="rotatingText">AI Powered Rent Prediction</div>
+
+<p>
+
+SmartRent AI predicts house rent prices using Machine Learning.
+
+</p>
+
+<p>
+
+Enter property details like BHK, size, city and furnishing
+to instantly estimate rental price.
+
+</p>
+
+</div>
+
+</section>
+
+<section id="predict">
+
+<div class="container">
+
+<h2>House Rent Prediction</h2>
+
+<form id="predictForm">
+
+<input type="number" placeholder="BHK" id="bhk">
+
+<input type="number" placeholder="Size (sqft)" id="size">
+
+<input type="number" placeholder="Bathroom" id="bathroom">
+
+<select id="city">
+<option value="0">Bangalore</option>
+<option value="1">Chennai</option>
+<option value="2">Delhi</option>
+<option value="3">Mumbai</option>
+</select>
+
+<select id="furnish">
+<option value="0">Unfurnished</option>
+<option value="1">Semi Furnished</option>
+<option value="2">Furnished</option>
+</select>
+
+<select id="parking">
+<option value="0">No Parking</option>
+<option value="1">Parking Available</option>
+</select>
+
+<button type="submit">Predict Rent</button>
+
+</form>
+
+<h2 id="result"></h2>
+
+</div>
+
+</section>
+
+<section id="analytics">
+
+<div class="container">
+
+<h2>Rental Market Analytics</h2>
+
+<div class="card">
+<h3>Delhi</h3>
+<p>Average Rent ₹15000</p>
+</div>
+
+<div class="card">
+<h3>Mumbai</h3>
+<p>Average Rent ₹22000</p>
+</div>
+
+<div class="card">
+<h3>Bangalore</h3>
+<p>Average Rent ₹18000</p>
+</div>
+
+<div class="card">
+<h3>Chennai</h3>
+<p>Average Rent ₹14000</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="theory">
+
+<div class="container">
+
+<h2>Machine Learning Theory</h2>
+
+<p>
+
+SmartRent AI uses Random Forest Regression to predict rental prices.
+
+</p>
+
+<p>
+
+The model learns patterns from thousands of housing listings.
+
+</p>
+
+<p>
+
+Features used:
+
+BHK  
+Size  
+Bathrooms  
+City  
+Furnishing
+
+</p>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<h2>About Project</h2>
+
+<p>
+
+This project demonstrates how Machine Learning can estimate house rents.
+
+</p>
+
+<p>
+
+Technologies Used:
+
+Python  
+Flask  
+Scikit-Learn  
+HTML  
+CSS  
+JavaScript
+
+</p>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<h2>Contact</h2>
+
+<input type="text" placeholder="Name">
+
+<input type="email" placeholder="Email">
+
+<textarea placeholder="Message"></textarea>
+
+<br>
+
+<button>Send</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>SmartRent AI © 2026</p>
+
+</footer>
+
+<script>
+
+document.getElementById("predictForm").addEventListener("submit",function(e){
+
+e.preventDefault()
+
+let data={
+
+bhk:document.getElementById("bhk").value,
+size:document.getElementById("size").value,
+bathroom:document.getElementById("bathroom").value,
+city:document.getElementById("city").value,
+furnish:document.getElementById("furnish").value
+
+}
+
+fetch("/predict",{
+
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify(data)
+
+})
+
+.then(res=>res.json())
+
+.then(data=>{
+
+document.getElementById("result").innerHTML="Predicted Rent ₹ "+data.rent
+
+})
+
+})
+
+</script>
+
+</body>
+
+</html>
