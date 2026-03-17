@@ -2,16 +2,16 @@
 
 A machine learning based web application that predicts house rent.
 
-## 🚀 Live Demo
+## Live Demo
 https://smart-house-rent-prediction-system-3.onrender.com/
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - Python
 - Flask
 - Scikit-learn
 - HTML
 
-## 📌 Features
+## Features
 - Predict rent based on input
 - Fast and simple UI
 - ML model integration
